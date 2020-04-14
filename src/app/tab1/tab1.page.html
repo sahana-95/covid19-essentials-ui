@@ -1,0 +1,119 @@
+<ion-header [translucent]="true" *ngIf="platform.is('mobile')">
+  <ion-toolbar>
+    <ion-title>
+      dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true"  class="bg">
+  <h4 class="ion-padding">
+    Coronavirus disease (COVID -19) outbreak situation
+  </h4>
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title class="ion-text-center">All Over the World</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-grid class="ion-text-center">
+        <ion-row>
+          <ion-col>
+            <ion-chip color="primary">
+              <ion-label>Confirmed Cases : <b>1,883,119</b></ion-label>
+            </ion-chip>
+          </ion-col>
+          <ion-col>
+            <ion-chip color="success">
+              <ion-label>Recovered : <b>443,816</b></ion-label>
+            </ion-chip>
+          </ion-col>
+
+        </ion-row>
+        <ion-row class="ion-text-center">
+          <ion-col>
+            <ion-chip color="danger">
+              <ion-label>Confirmed Deaths : <b>117,569</b></ion-label>
+            </ion-chip>
+          </ion-col>
+
+
+        </ion-row>
+      </ion-grid>
+      <p>Last Update: 15 Apr 2020, 11:30 GMT+5:30 </p>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title class="ion-text-center"> Country : India</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-grid class="ion-text-center">
+        <ion-row>
+          <ion-col>
+            <ion-chip color="primary">
+              <ion-label>Confirmed Cases : <b> 9,635</b></ion-label>
+            </ion-chip>
+          </ion-col>
+          <ion-col>
+            <ion-chip color="success">
+              <ion-label>Recovered : <b>1,178</b></ion-label>
+            </ion-chip>
+          </ion-col>
+
+        </ion-row>
+        <ion-row class="ion-text-center">
+          <ion-col>
+            <ion-chip color="danger">
+              <ion-label>Confirmed Deaths : <b>331</b></ion-label>
+            </ion-chip>
+          </ion-col>
+
+
+        </ion-row>
+      </ion-grid>
+      <p>Last Update: 15 Apr 2020, 11:30 GMT+5:30 </p>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+
+      <ion-card-title class="ion-text-center"> Country : US</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-grid class="ion-text-center">
+        <ion-row>
+          <ion-col>
+            <ion-chip color="primary">
+              <ion-label>Confirmed Cases : <b> 582,634              </b></ion-label>
+            </ion-chip>
+          </ion-col>
+          <ion-col>
+            <ion-chip color="success">
+              <ion-label>Recovered : <b>44,308              </b></ion-label>
+            </ion-chip>
+          </ion-col>
+
+        </ion-row>
+        <ion-row class="ion-text-center">
+          <ion-col>
+            <ion-chip color="danger">
+              <ion-label>Confirmed Deaths : <b>23,649              </b></ion-label>
+            </ion-chip>
+          </ion-col>
+
+
+        </ion-row>
+      </ion-grid>
+      <p>Last Update: 15 Apr 2020, 11:30 GMT+5:30 </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
