@@ -4,7 +4,7 @@
       <ion-title>COVID-19 : Ward-wise Emergency Info App</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-tabs #tabs (ionTabsDidChange)="setTitle()" [ngClass]=" platform.is('desktop') ? 'ds-top' : ''">
+<ion-tabs [ngClass]=" platform.is('desktop') ? 'ds-top' : ''">
  
 
     <ion-tab-bar  slot="top" *ngIf="platform.is('desktop')">
