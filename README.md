@@ -2,6 +2,8 @@
 
 Application that allows you to get in touch quickly and easily with people who are need support, in this moment of emergence.
 
+Using [Ionic](https://ionicframework.com/docs) and [Angular](https://angular.io/docs) Framework.
+
 
 ## Getting Started
 

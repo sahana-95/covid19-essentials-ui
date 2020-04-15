@@ -123,3 +123,11 @@ $grid-breakpoints: (
 ion-segment{
   height: 40px;
 }
+.tab-selected{
+  background-color: #e2e2e2;
+  color:#eb445a;
+  font-size: 16px;
+}
+.ion-focusable{
+  // color:#eb445a;
+}

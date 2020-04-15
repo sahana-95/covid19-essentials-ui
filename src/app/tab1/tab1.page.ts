@@ -12,8 +12,11 @@ export class Tab1Page {
 
 
   constructor( public platform : Platform) {}
-  getlist(){
-    this.lists.push(this.lists[0]);
+  onNotify(data){
+    this.lists = this.lists.map((a) => ({sort: Math.random(), value: a}))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
   }
+  
 
 }

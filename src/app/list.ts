@@ -41,7 +41,7 @@ export const medlists = [{
     name: 'MedPlus ',
     location: '554, Kunrathur Main Road',
     phone: '+91 9823-3435-94',
-    img:'https://lh3.googleusercontent.com/XMXamTaMtOli7jDc-iiOjD_krjBKu-3cu1IyQmFevCsKqCyY9-IR2Muf47bdHoUqIbwV=s180-rw'
+    img:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Medplus_logo.jpg/220px-Medplus_logo.jpg'
 
 },
 {
@@ -49,14 +49,14 @@ export const medlists = [{
     location: 'Thirumalai Nagar',
     phone: '+91 9823-3435-94',
 
-    img:'https://lh3.googleusercontent.com/HVCcJtZjHu-OEnFjKthC18YKLPIqIpGsePCUhUXNe9umWLNooJwlZ9eSxSzmnLI4zw=s180-rw'
+    img:'https://media.glassdoor.com/sql/552125/apollo-pharmacy-squarelogo-1525857827435.png'
 
 },
 {
     name: 'MedPlus ',
     location: '554, Valasaravakkam Main Road',
     phone: '+91 9823-3435-94',
-    img:'https://lh3.googleusercontent.com/XMXamTaMtOli7jDc-iiOjD_krjBKu-3cu1IyQmFevCsKqCyY9-IR2Muf47bdHoUqIbwV=s180-rw'
+    img:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Medplus_logo.jpg/220px-Medplus_logo.jpg'
 
 },
 {
@@ -64,7 +64,7 @@ export const medlists = [{
     location: 'Kamarajar Nagar',
     phone: '+91 9823-3435-94',
 
-    img:'https://lh3.googleusercontent.com/HVCcJtZjHu-OEnFjKthC18YKLPIqIpGsePCUhUXNe9umWLNooJwlZ9eSxSzmnLI4zw=s180-rw'
+    img:'https://media.glassdoor.com/sql/552125/apollo-pharmacy-squarelogo-1525857827435.png'
 
 }];
 export const veglist = [{

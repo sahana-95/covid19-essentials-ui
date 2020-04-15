@@ -1,12 +1,6 @@
-<ion-header [translucent]="true" *ngIf="platform.is('mobile')">
-  <ion-toolbar>
-    <ion-title>
-      dashboard
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 <ion-content [fullscreen]="true">
-  <app-explore-container name="Tab 3 page"  (click)= "getlist()"></app-explore-container>
+  <app-explore-container name="Tab 3 page"  (notify)="onNotify($event)"></app-explore-container>
 
   <!-- <ion-grid>
   <ion-segment (ionChange)="segmentChanged($event)" value="1" class="plt-iphone plt-ios plt-phablet plt-mobile ios"

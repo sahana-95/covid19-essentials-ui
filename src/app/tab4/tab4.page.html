@@ -1,12 +1,6 @@
-<ion-header [translucent]="true" *ngIf="platform.is('mobile')">
-  <ion-toolbar>
-    <ion-title>
-      dashboard
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 <ion-content [fullscreen]="true">
-  <app-explore-container name="Tab 4 page"  (click)= "getlist()"></app-explore-container>
+  <app-explore-container name="Tab 4 page"  (notify)="onNotify($event)"></app-explore-container>
   <ion-card *ngFor="let list of lists">
     <ion-item routerLink="/tabs/tab4/details">
       <ion-thumbnail slot="end">
