@@ -14,6 +14,11 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+          },
+          {
+            path: 'details',
+            loadChildren: () =>
+              import('../details/details.module').then(m => m.DetailsPageModule)
           }
         ]
       },
@@ -24,6 +29,11 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+          },
+          {
+            path: 'details',
+            loadChildren: () =>
+              import('../details/details.module').then(m => m.DetailsPageModule)
           }
         ]
       },
@@ -34,19 +44,39 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+          },
+          {
+            path: 'details',
+            loadChildren: () =>
+              import('../details/details.module').then(m => m.DetailsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'tab4',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab4/tab4.module').then(m => m.Tab3PageModule)
+          },
+          {
+            path: 'details',
+            loadChildren: () =>
+              import('../details/details.module').then(m => m.DetailsPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab2',
+        redirectTo: '/tabs/tab3',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab2',
+    redirectTo: '/tabs/tab3',
     pathMatch: 'full'
   }
 ];

@@ -6,9 +6,25 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true"  class="bg">
-  <h4 class="ion-padding">
+  <!-- <h4 class="ion-padding">
     Coronavirus disease (COVID -19) outbreak situation
-  </h4>
+  </h4> -->
+  <app-explore-container name="Tab 1 page" (click)= "getlist()" ></app-explore-container>
+  <ion-card >
+    <ion-item routerLink="/tabs/tab3/details" *ngFor="let list of lists">
+      <ion-thumbnail slot="end">
+        <img [src]="list.img">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{list.name}}</h3>
+        <p> <ion-icon name="location-outline"></ion-icon> {{list.location}}</p>
+        <!-- <p>  <ion-icon name="call-outline" slot="end"></ion-icon> {{list.phone}}</p> -->
+      </ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+
+    </ion-item>
+  </ion-card>
+<!-- 
   <ion-card>
     <ion-card-header>
 
@@ -115,5 +131,5 @@
       </ion-grid>
       <p>Last Update: 15 Apr 2020, 11:30 GMT+5:30 </p>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
 </ion-content>

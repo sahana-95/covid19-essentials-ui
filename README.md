@@ -1,4 +1,4 @@
-# COVID-19 ZoneCare 🏩
+# COVID-19 Phoenix 🏩
 
 Application that allows you to get in touch quickly and easily with people who are need support, in this moment of emergence.
 

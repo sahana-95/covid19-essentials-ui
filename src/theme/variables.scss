@@ -95,7 +95,9 @@ $grid-breakpoints: (
     ion-toolbar,
     app-tab1,
     app-tab2,
-    app-tab3 {
+    app-tab3 ,
+    app-tab4,
+    app-details {
       margin: 0;
       padding-right: calc((100% - #{map-get($grid-max-widths, lg)}) / 2);
       padding-left: calc((100% - #{map-get($grid-max-widths, lg)}) / 2);
@@ -111,7 +113,7 @@ $grid-breakpoints: (
     margin-top: 3px;
     height: 44px;
   }
-  app-tab1,app-tab2 ,app-tab3{
+  app-tab1,app-tab2 ,app-tab3,app-tab4 , app-details{
     background: #f1f1f1;
   }
   ion-content{

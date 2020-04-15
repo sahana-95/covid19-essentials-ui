@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
-import {grocerylists} from '../list'
+import {medlists} from '../list'
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-tab4',
+  templateUrl: 'tab4.page.html',
+  styleUrls: ['tab4.page.scss']
 })
 export class Tab3Page {
-  lists = grocerylists;
+  lists = medlists;
   constructor(public platform : Platform) {
     
   }

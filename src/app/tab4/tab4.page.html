@@ -6,9 +6,23 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <app-explore-container name="Tab 3 page"  (click)= "getlist()"></app-explore-container>
+  <app-explore-container name="Tab 4 page"  (click)= "getlist()"></app-explore-container>
+  <ion-card *ngFor="let list of lists">
+    <ion-item routerLink="/tabs/tab4/details">
+      <ion-thumbnail slot="end">
+        <img [src]="list.img">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{list.name}}</h3>
+        <p> <ion-icon name="location-outline"></ion-icon> {{list.location}}</p>
+        <p>  <ion-icon name="call-outline" slot="end"></ion-icon> {{list.phone}}</p>
+      </ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
 
-  <!-- <ion-grid>
+    </ion-item>
+  </ion-card>
+<!-- 
+  <ion-grid>
   <ion-segment (ionChange)="segmentChanged($event)" value="1" class="plt-iphone plt-ios plt-phablet plt-mobile ios"
     mode="ios">
     <ion-segment-button value="1">
@@ -22,27 +36,13 @@
     </ion-segment-button>
   </ion-segment>
   <div class="p22"></div>
-  </ion-grid> -->
+  </ion-grid>
 
 
 
 
   <ion-card *ngFor="let list of lists">
-    <ion-item routerLink="/tabs/tab3/details">
-      <ion-thumbnail slot="start">
-        <img [src]="list.img">
-      </ion-thumbnail>
-      <ion-label>
-        <h3>{{list.name}}</h3>
-        <p> <ion-icon name="location-outline"></ion-icon> {{list.location}}</p>
-        <p>  <ion-icon name="call-outline" slot="end"></ion-icon> {{list.phone}}</p>
-      </ion-label>
-      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
-
-    </ion-item>
-  </ion-card>
-
-  <!-- <ion-list>
+  <ion-list>
     
 
     <ion-item-divider>
@@ -64,8 +64,9 @@
       </ion-label>
       <ion-icon name="call-outline" slot="start"></ion-icon>
     </ion-item>
-  </ion-list> -->
-
+  </ion-list>
+  </ion-card>
+ -->
 
 
 </ion-content>

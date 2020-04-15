@@ -1,0 +1,115 @@
+<ion-header [translucent]="true" *ngIf="platform.is('mobile')">
+  <ion-toolbar>
+    <ion-title>
+      dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <!-- <app-explore-container name="Tab 4 page"></app-explore-container> -->
+    <ion-card>
+      <img style="height: 175px;" src="https://www.bigbasket.com/media/uploads/banner_images/2004225_essentials_400_27thMar.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Chromepet,chennai-600032</ion-card-subtitle>
+        <ion-card-title>Sai Deparment Store</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Online Grocery Shopping for Super Quality and Super Savings!
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+     
+      <ion-card-header>
+        <ion-card-title>Items</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item  *ngFor="let list of lists">
+          <ion-avatar slot="start">
+            <img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/6f7d5511-eb2f-4631-a10f-be4e15d82910/dddde6ba-4399-4675-96c7-c5d210e5128e/T1_All_Fresh-Fruits_DT_1_480x360_25thMar.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h3>{{list.name}}</h3>
+            <p> <b>Rs. 100</b></p>
+            <p> {{list.attr}}</p>
+            <!-- <p>  <ion-icon name="call-outline" slot="end"></ion-icon> {{list.phone}}</p> -->
+          </ion-label>
+          
+          <div (click)="addtocart()">
+          <ion-icon name="remove-circle-outline" slot="end" style="    font-size: 26px; color: grey; top: 7px; position: relative;"></ion-icon>
+
+            1
+          <ion-icon name="add-circle-outline" slot="end" style="    font-size: 26px; color: grey; top: 7px; position: relative;"></ion-icon>
+
+          </div>
+    
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+<!-- 
+  <ion-grid>
+  <ion-segment (ionChange)="segmentChanged($event)" value="1" class="plt-iphone plt-ios plt-phablet plt-mobile ios"
+    mode="ios">
+    <ion-segment-button value="1">
+      <ion-label>Grocery Shops</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Medical Stores</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>General Physicians</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div class="p22"></div>
+  </ion-grid>
+
+
+
+
+  <ion-card *ngFor="let list of lists">
+  <ion-list>
+    
+
+    <ion-item-divider>
+      <ion-label class="f19" color="dark" >
+        <b>{{list.name}}</b>
+      </ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+
+      <ion-label>
+        {{list.contact}}
+      </ion-label>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item lines="none">
+
+      <ion-label>
+       <a href="tel:1234567891">{{list.phone}}</a> 
+      </ion-label>
+      <ion-icon name="call-outline" slot="start"></ion-icon>
+    </ion-item>
+  </ion-list>
+  </ion-card>
+ -->
+
+
+</ion-content>
+<ion-footer style="bottom: 56px;" color="success">
+  <!-- <ion-textarea placeholder="Enter more information here..."></ion-textarea> -->
+
+  <ion-toolbar color="success">
+    
+    <ion-title style="margin-top: -9px;">
+      <ion-icon name="cart-outline" style="font-size: 30px;"></ion-icon> 
+      <ion-badge color="danger" style="    top: -11px; position: relative;">{{count}}</ion-badge>
+
+     |   Checkout & Cash on Delivery
+    </ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button id="changeText" onClick="toggleText()">
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
