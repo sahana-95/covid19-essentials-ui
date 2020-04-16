@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import {veglist} from '../list'
+import {ApiService} from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -8,14 +10,35 @@ import {veglist} from '../list'
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  lists = veglist;
+  lists :any;
+  noDatafound: boolean = false;
 
 
-  constructor( public platform : Platform) {}
+  constructor( public platform : Platform,public apiService: ApiService,private router: Router) {}
+  ionViewWillEnter() {
+    this.getlist('Chromepet');
+  }
   onNotify(data){
-    this.lists = this.lists.map((a) => ({sort: Math.random(), value: a}))
-    .sort((a, b) => a.sort - b.sort)
-    .map((a) => a.value)
+    // this.lists = this.lists.map((a) => ({sort: Math.random(), value: a}))
+    // .sort((a, b) => a.sort - b.sort)
+    // .map((a) => a.value);
+    this.getlist(data);
+
+    
+  }
+  getlist(val){
+    this.apiService.getList(val).subscribe(response => {
+      if(response.length !== 0 ){
+        this.noDatafound= false;
+        this.lists = response;
+      }
+      else{
+        this.noDatafound= true;
+      }
+    })
+  }
+  navigate(){
+    this.router.navigate(['/detail'])
   }
   
 
