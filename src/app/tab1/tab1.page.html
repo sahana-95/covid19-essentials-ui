@@ -5,14 +5,14 @@
   </h4> -->
   <app-explore-container name="Tab 1 page" (notify)="onNotify($event)" ></app-explore-container>
   <ion-card >
-    <ion-item routerLink="/tabs/tab1/details" *ngFor="let list of lists">
+    <ion-item *ngFor="let list of lists" routerLink (click)="navigate(list)" >
       <ion-thumbnail slot="end">
         <img [src]="list.img">
       </ion-thumbnail>
       <ion-label>
         <h3>{{list.name}}</h3>
         <p> <ion-icon name="location-outline"></ion-icon> {{list.location}}</p>
-        <!-- <p>  <ion-icon name="call-outline" slot="end"></ion-icon> {{list.phone}}</p> -->
+        <!-- <p>  <ion-icon name="call-outline" slot="end"></ion-icon> {{list.phone}}</p>  routerLink="/tabs/tab1/details"  [state]="{tab:'vegetable'}"  -->
       </ion-label>
       <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
 

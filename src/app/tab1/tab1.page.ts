@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import {veglist} from '../list'
 import {ApiService} from '../api.service';
-import { Router } from '@angular/router';
+import { Router ,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -37,8 +37,9 @@ export class Tab1Page {
       }
     })
   }
-  navigate(){
-    this.router.navigate(['/detail'])
+  navigate(val){
+    // console.log(val)
+    this.router.navigate(['/tabs/tab1/details'],{state:{data:val,selected:'vegetable'}})
   }
   
 
